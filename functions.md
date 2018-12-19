@@ -18,6 +18,7 @@ if let bounds = minMax(array: [8, -6, 2, 109, 3, 71]) {
 }
 
 ==================
+[https://docs.swift.org/swift-book/GuidedTour/GuidedTour.html]
 
 func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
     var min = scores[0]
