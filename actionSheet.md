@@ -21,3 +21,21 @@
     [self presentViewController:alert animated:YES completion:nil]; // 6
 }
  
+ 
+ 
+ 
+ alert -
+ 
+ @IBAction func alertButtonPressed(sender: UIButton) {
+    let alert = UIAlertController(title: "Alert", message: "This is an alert.", preferredStyle: .Alert) // 7
+    let defaultAction = UIAlertAction(title: "OK", style: .Default) { (alert: UIAlertAction!) -> Void in
+        NSLog("You pressed button OK")
+    } // 8
+        
+    alert.addAction(defaultAction) // 9
+    alert.addTextFieldWithConfigurationHandler { (textField: UITextField!) -> Void in
+        textField.placeholder = "Input data..."
+    } // 10
+        
+    presentViewController(alert, animated: true, completion:nil)  // 11
+}
